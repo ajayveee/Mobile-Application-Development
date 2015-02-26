@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/storyParentRelLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewTitle"
+        android:text="@string/byTxt"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textViewRepName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textViewDateAiredTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:text="@string/dateAiredTxt"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textViewDateAired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewDateAiredTxt"
+        android:layout_alignBottom="@+id/textViewDateAiredTxt"
+        android:layout_toRightOf="@+id/textViewDateAiredTxt"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewDateAiredTxt"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/navigation_back" 
+            android:onClick="backClicked"/>
+
+        <ImageView
+            android:id="@+id/imageViewBrowser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/location_web_site" 
+            android:onClick="browserClicked"/>
+
+        <ImageView
+            android:id="@+id/imageViewMediaCtrl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/device_access_volume_on"
+             android:onClick="mp3Clicked" />
+
+        <ImageView
+            android:id="@+id/imageViewFav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/rating_not_important" 
+            android:onClick="favClicked"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTeaserFull"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:text="TextView" />
+
+</RelativeLayout>

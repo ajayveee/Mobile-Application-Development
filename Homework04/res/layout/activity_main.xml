@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutBtnRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonPrograms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/programBtnTxt" 
+            android:onClick="itemBtnClicked"/>
+
+        <Button
+            android:id="@+id/buttonTopics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/topicBtnTxt" 
+            android:onClick="itemBtnClicked"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutBtnRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/RelativeLayoutBtnRow1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonFavorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/favoriteBtnTxt"
+            android:onClick="favoritesBtnClicked" />
+
+        <Button
+            android:id="@+id/buttonExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/exitBtnTxt"
+            android:onClick="exitBtnClicked" />
+    </RelativeLayout>
+
+</RelativeLayout>
