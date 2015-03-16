@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Midterm</string>
+    <string name="app_name">Homework05</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_apps">AppsActivity</string>
     <string name="title_activity_preview">PreviewActivity</string>
