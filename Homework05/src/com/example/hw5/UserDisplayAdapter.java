@@ -28,7 +28,7 @@ public class UserDisplayAdapter extends ArrayAdapter<ParseUser> {
 			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(resource, parent, false);
 		}
-		String name = (String)objects.get(position).get("firstName") + (String)objects.get(position).get("lastName");
+		String name = (String)objects.get(position).get("firstName") +  " " + (String)objects.get(position).get("lastName");
 		((TextView) convertView.findViewById(R.id.textViewUsername)).setText(name);
 		return convertView;
 	}

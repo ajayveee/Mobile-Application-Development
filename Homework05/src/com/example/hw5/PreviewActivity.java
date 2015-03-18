@@ -65,7 +65,9 @@ public class PreviewActivity extends Activity {
 
 	public void imgClicked(View view) {
 		try {
-			Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(app.getAppUrl()));
+//			Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(app.getAppUrl()));
+			Intent myIntent = new Intent(this, WebViewActivity.class);
+			myIntent.putExtra(WebViewActivity.URL_KEY, app.getAppUrl());
 			startActivity(myIntent);
 		} catch (ActivityNotFoundException e) {
 			Toast.makeText(this, "No application can handle this request." + " Please install a webbrowser",

@@ -6,4 +6,5 @@
     <dimen name="alertMargin">5dp</dimen>
     <dimen name="imgPreviewAllMargin">10px</dimen>
 	<dimen name="imgDimen">70dp</dimen>
+	<dimen name="userListItemMargin">5px</dimen>
 </resources>
