@@ -95,7 +95,7 @@ public class PreviewActivity extends Activity {
 					AlertDialog.Builder builder = new AlertDialog.Builder(PreviewActivity.this);
 					builder.setView(PreviewActivity.this.getLayoutInflater().inflate(R.layout.user_list_dialog, null));
 					builder.setTitle("Users");
-					builder.setAdapter(new UserDisplayAdapter(PreviewActivity.this, R.layout.user_list_item_layout, arg0), new OnClickListener() {
+					builder.setAdapter(new UserDisplayAdapter(PreviewActivity.this, android.R.layout.simple_list_item_1, arg0), new OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface dialog, int which) {

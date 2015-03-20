@@ -29,7 +29,7 @@ public class UserDisplayAdapter extends ArrayAdapter<ParseUser> {
 			convertView = inflater.inflate(resource, parent, false);
 		}
 		String name = (String)objects.get(position).get("firstName") +  " " + (String)objects.get(position).get("lastName");
-		((TextView) convertView.findViewById(R.id.textViewUsername)).setText(name);
+		((TextView) convertView.findViewById(android.R.id.text1)).setText(name);
 		return convertView;
 	}
 
