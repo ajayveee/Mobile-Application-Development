@@ -51,7 +51,7 @@ public class LoginActivity extends Activity {
 		if(!email.matches(emailPattern) || !email.contains("@") || !email.contains(".")){
 			Toast.makeText(this, "Email ID not valid", Toast.LENGTH_LONG).show();
 		}
-		logUserIn(email, pass);
+		logUserIn(email,pass);
 		
 	}
 
