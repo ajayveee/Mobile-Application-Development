@@ -7,6 +7,7 @@ package com.example.hw5;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.parse.ParseObject;
@@ -20,6 +21,7 @@ public class App implements Serializable {
 	private double price;
 	private String appPhotoSmall;
 	private String appPhotoLarge;
+	private Date releaseDate;
 	public static final String APP_TITLE = "title";
 	public static final String APP_URL = "url";
 	public static final String APP_PHOTO_LARGE = "photoLarge";
@@ -27,6 +29,7 @@ public class App implements Serializable {
 	public static final String APP_DEV_NAME = "devName";
 	public static final String APP_PRICE = "price";
 	public static final String APP_ID = "id";
+	public static final String APP_RELEASE_DATE="releaseDate";
 
 	public long getId() {
 		return id;
@@ -93,6 +96,7 @@ public class App implements Serializable {
 		app.setId(po.getLong(APP_ID));
 		app.setPrice(po.getDouble(APP_PRICE));
 		app.setTitle(po.getString(APP_TITLE));
+		app.setReleaseDate(po.getDate(APP_RELEASE_DATE));
 		return app;
 	}
 	public static List<App> convertToApps(List<ParseObject> pos){
@@ -101,5 +105,13 @@ public class App implements Serializable {
 			apps.add(convertToApp(po));
 		}
 		return apps;
+	}
+
+	public Date getReleaseDate() {
+		return releaseDate;
+	}
+
+	public void setReleaseDate(Date releaseDate) {
+		this.releaseDate = releaseDate;
 	}
 }

@@ -5,9 +5,12 @@
  */
 package com.example.hw5;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 import android.content.Context;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +24,7 @@ public class AppDisplayAdapter extends ArrayAdapter<App> {
 	private Context context;
 	private int resource;
 	private List<App> apps;
+	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
 
 	public AppDisplayAdapter(Context context, int resource, List<App> objects) {
 		super(context, resource, objects);
@@ -39,6 +43,10 @@ public class AppDisplayAdapter extends ArrayAdapter<App> {
 		((TextView) convertView.findViewById(R.id.textViewAppName)).setText(app.getTitle());
 		((TextView) convertView.findViewById(R.id.textViewDevName)).setText(app.getDevName());
 		((TextView) convertView.findViewById(R.id.textViewPrice)).setText(app.getPrice() + "");
+		if (app.getReleaseDate() != null) {
+			((TextView) convertView.findViewById(R.id.textViewReleaseDate)).setText(sdf.format(app.getReleaseDate())
+					+ "");
+		}
 		ImageView iv = (ImageView) convertView.findViewById(R.id.imageViewThumb);
 		if (app.getAppPhotoLarge() != null) {
 
