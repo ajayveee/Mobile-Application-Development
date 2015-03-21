@@ -1,3 +1,10 @@
+/**
+ * Ajay Vijayakumaran Nair 
+ * A Yang 
+ * Nachiket Doke
+ * 
+ */
+
 package com.example.hw5;
 
 import static com.example.hw5.App.APP_DEV_NAME;
