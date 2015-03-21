@@ -46,7 +46,10 @@ public class LoginActivity extends Activity {
 		if (email == null || email.isEmpty() || pass ==null || pass.isEmpty()) {
 			Toast.makeText(this, "Mandatory login fields cant be empty", Toast.LENGTH_LONG).show();
 			return;
-
+		}
+		String emailPattern="[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+		if(!email.matches(emailPattern) || !email.contains("@") || !email.contains(".")){
+			Toast.makeText(this, "Email ID not valid", Toast.LENGTH_LONG).show();
 		}
 		logUserIn(email, pass);
 		
