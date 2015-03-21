@@ -64,9 +64,9 @@ public class LoginActivity extends Activity {
 					startActivity(intent);
 					finish();
 				} else {
-					Log.d(LoginActivity.LOGGING_KEY, "User couldnt b logged in");
+					Log.d(LoginActivity.LOGGING_KEY, "User couldnt b logged in", e);
 					if (e.getCode() == ParseException.OBJECT_NOT_FOUND) {
-						Toast.makeText(LoginActivity.this, "Dint find given user in server", Toast.LENGTH_LONG).show();
+						Toast.makeText(LoginActivity.this, "Sign in failure :" + e.getMessage(), Toast.LENGTH_LONG).show();
 					}
 				}
 			}
